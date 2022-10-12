@@ -1,12 +1,12 @@
 FROM python:3-alpine
 
+
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install Flask
 
-COPY . .
+COPY . /app
 
-EXPOSE 5000 
+EXPOSE 80
 
 CMD ["python", "app.py"]
